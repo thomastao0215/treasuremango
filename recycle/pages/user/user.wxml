@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="contain my">
+  <view class="header">
+
+    <view class="user-info">
+      <view class="user-left">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> Get Avatar </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatar}}" mode="cover"></image>
+        </block>
+      </view>
+      <view class="user-right">
+        <view clas="user-right-up">
+          <text class="userinfo-nickname">{{userInfo.nickname}}</text>
+        </view>
+        <view clas="user-right-down">
+          <text class="userinfo-date" >Welcome to Treasureman Go
+          </text>
+        </view>
+      </view>
+    </view>
+
+    <van-cell-group custom-class="cells" border="{{ false }}">
+      <van-cell title="Management" custom-class="cell-item" bind:click="navToDevice" is-link center />
+      <van-cell title="About us" custom-class="cell-item" bind:click="Subs" border="{{ false }}" is-link center />
+      <van-cell title="Custormer" custom-class="cell-item" border="{{ false }}" is-link center>
+        <button class="btn" session-from="weapp" open-type="contact">联系客服</button>
+      </van-cell>
+
+    </van-cell-group>
+    <official-account></official-account>
+  </view>
+  <van-toast id="van-toast" />
+</view>

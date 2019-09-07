@@ -1,0 +1,4 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="bkg">
+  <button class="add" wx:if="{{!hasUserInfo && canIUse}}"  open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权</button>
+</view>

@@ -1,0 +1,143 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.cell-item {
+  height: 64px;
+  font-family: PingFangSC-Regular;
+  font-weight: 500;
+  position: relative;
+}
+
+
+.demo-swipe-cell {
+  user-select: none;
+}
+
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+  display: inline-block;
+  width: 65px;
+  height: 44px;
+  font-size: 15px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  background-color: #f44;
+}
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.function-box {
+  display: flex;
+  margin: 0 auto;
+
+}
+.function-box .function-cell {
+  flex: 33.33%;
+  align-content: center;
+}
+.function-cell-up {
+  display:flex;         
+  padding-top: 15px;        
+ justify-content: center;
+}
+.function-cell-up image {
+  width: 29px;
+  height: 29px;
+}
+.function-cell-down {
+  padding-top: 10px;
+  text-align: center;
+  color: #3C3C3C;
+  font-size:12px;
+  font-family: PingFangSC-Regular;
+  font-weight: 500;
+}
+
+
+.userinfo-nickname {
+  color: black;
+  font-size:16px;
+  font-family: PingFangSC-Regular;
+  font-weight: 500;
+}
+
+.userinfo-date {
+  color: black;
+  font-size:14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 600;
+}
+.header{
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:210px;
+  
+}
+.user-function{
+  width:315px;
+  height:100px;
+  padding: 10px;
+  background:rgba(255,255,255,1);
+  box-shadow:1px 4px 9px 3px rgba(60,60,60,0.06);
+  border-radius:4px;
+  margin: 0 auto;
+}
+.user-left{
+  flex: 3;
+}
+.user-right {
+  flex: 7;
+}
+.user-info {
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  width: 80vw;
+  padding: 20px;
+}
+
+
+  .btn {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: salmon;
+    opacity: 0;
+    left: 0;
+    top: 0;
+  }

@@ -1,0 +1,47 @@
+<view class="page">
+                      <map
+  id='qqMap'
+  polyline='{{polyline}}'
+  class="mb-map"
+  longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  circles='{{circles}}'
+  scale="19"
+  show-location
+  markers="{{markers}}"
+  controls="{{controls}}"
+  bindcontroltap="controltap"
+  bindregionchange='mapChange'
+  bindmarkertap='gotohere'
+  >
+  <cover-view></cover-view>
+  </map>
+  <view >
+    <view>
+
+
+    <view wx:if="{{!confirm}}" class="mb-type" bindtap='openLocation' >
+      <swiper
+      style='height:20vh'
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{markers}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item ">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{item.iconPath}}" mode="cover"></image>
+          <text>{{item.type}}</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+
+      <view class="button " bindtap='confirmLocation'>
+        <text wx:if="{{!completed}}">{{!confirm?'Go':'确认委托类型'}}</text>
+        <text wx:if="{{completed}}">等待接单...</text>
+    </view>
+  </view>
+  
+    </view>
+</view>
